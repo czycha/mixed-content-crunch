@@ -89,3 +89,9 @@ A decent way to detect mixed content is to basically search resource URLs for "h
 ### Is this 100% accurate?
 
 No. As discussed in the hypothetical situation above, MCC will detect attempts to load insecure resources. However, on some more interactive pages, there might be a trigger to load more content (clicking a button, submitting a form, etc.). In this edge case, the script, which will not interact with the page, will fail to detect these conditionally loaded resources. However, it is most likely that the NBA did not detect such cases in their initial report anyway.
+
+### Our results
+
+This script took a long time to run, but it's difficult to say how long exactly. The script was stopped and resumed a few different times due to work day breaks and development on the script itself. Also, halfway through, the timeout was changed from 30s to 15s since a lot of our older nodes were spending half a minute timing out. With this is mind, we had 3,168 nodes from Drupal and it took approximately 1.5 work days. 
+
+The to do script output was 1,791 total nodes (56.53%) to work on. We filtered further based on resource domains, publish status, and whether or not pages with errors had logged any mixed content resources and ended up with 285 nodes (9.00%).
