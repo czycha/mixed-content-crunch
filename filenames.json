@@ -1,0 +1,8 @@
+{
+  "checked": "./output/checked-nids.csv",
+  "errors": "./output/errors.csv",
+  "errorList": "./output/error-nids.csv",
+  "results": "./output/results.csv",
+  "total": "./output/nids.csv",
+  "todo": "./output/todo.csv"
+}
