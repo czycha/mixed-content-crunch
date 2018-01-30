@@ -185,7 +185,7 @@ var running = true;
         console.log('\t' + chalk.red(status));
         throw `Status code: ${status}`
       }
-      let publishedStatus = await page.$('body.node-unpublished');
+      let publishedStatus = await page.$('.node-unpublished');
       if(publishedStatus !== null) {
         console.log(chalk.yellow('\tUnpublished Page'));
         resultStream.write(`Unpublished Page,${nid},\n`);
